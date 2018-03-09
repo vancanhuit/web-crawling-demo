@@ -3,3 +3,4 @@
 - Download and install [Python 3.5+](https://www.python.org/).
 - Install BeautifulSoup 4 by following instructions [here](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).
 - Run `python main.py` and see csv data in `data/` folder.
+- Website used for this demo is [VnExpress](https://vnexpress.net/)
