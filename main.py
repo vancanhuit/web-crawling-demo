@@ -14,6 +14,7 @@ def not_relative_uri(href):
 def write_to_csv_file(filename, feeds):
     with open(filename, 'w') as csv_file:
         writer = csv.writer(csv_file)
+        writer.writerow(['Title', 'Link'])
 
         for feed in feeds:
             title = feed.get('title')
@@ -37,10 +38,5 @@ sidebar_home_1 = soup.find(
     'section', class_='sidebar_home_1').find_all(
         'a', class_='', href=not_relative_uri)
 
-sidebar_home_2 = soup.find(
-    'section', class_='sidebar_home_2').find_all(
-        'a', class_='', href=not_relative_uri)
-
 write_to_csv_file(data_file, new_feeds)
 write_to_csv_file(data_file, sidebar_home_1)
-write_to_csv_file(data_file, sidebar_home_2)
